@@ -7,4 +7,4 @@ Allow: /images/
 Allow: /videos/
 Allow: /fonts/
 
-https://zavopex.vercel.app/sitemap.xml
+https://davopex.vercel.app/sitemap.xml
