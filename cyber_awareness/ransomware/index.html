@@ -1,15 +1,15 @@
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Cybersecurity Video Tutorials | Ethical Hacking Guide - Davopex</title>  
-  <meta name="description" content="Watch free cybersecurity tutorials on Davopex. Learn about phishing, ransomware, and ethical hacking through high-quality animated videos and expert walkthroughs.">
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Ransomware | Davopex</title>  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
 
-  <meta property="og:title" content="Cybersecurity Video Tutorials | Ethical Hacking Guide - Davopex"/>
-  <meta property="og:image" content="https://davopex.vercel.app/images/images/davopex-1024x1024.png"/>
-  <meta property="og:image:secure_url" content="https://davopex.vercel.app/images/images/davopex-1024x1024.png"/>
+   <meta property="og:title" content="Understanding Ransomware | Davopex"/>
+  <meta property="og:description" content="Master the mechanics of Ransomware: From initial delivery and double-exfiltration to the final encryption event and VSS purging."/>
+  <meta property="og:image" content="https://davopex.vercel.app/assets/images/davopex-1024x1024.png"/>
+  <meta property="og:image:secure_url" content="https://davopex.vercel.app/assets/images/davopex-1024x1024.png"/>
   <meta property="og:image:width" content="1024"/>
   <meta property="og:image:height" content="1024"/>
   <meta property="og:image:alt" content="davopex logo"/>
@@ -20,14 +20,15 @@
   <meta property="og:site_name" content="Davopex"/>
   <meta property="og:locale" content="en_US"/>
 
-  <meta name="keywords" content="Davopex, cybersecurity, ethical hacking, cyber awareness, hacking tutorials"/>
+  <meta name="description" content="Davopex provides an in-depth look at Ransomware attack vectors, encryption payloads, and data exfiltration techniques for cybersecurity students." />
+  <meta name="keywords" content="Ransomware, encryption, VSS purging, data exfiltration, cybersecurity, ethical hacking, malware analysis"/>
   <meta name="author" content="Davopex">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@davopexofficial">
-  <meta name="twitter:title" content="Davopex | Cybersecurity & Ethical Hacking">
-  <meta name="twitter:description" content="Davopex through practical tips, trusted resources, and real-world best practices, you’ll learn how to recognize and prevent common cyber threats such as phishing attacks, malicious software, and data leaks.">
-  <meta name="twitter:image" content="https://davopex.vercel.app/images/images/davopex-800x418.png">
+  <meta name="twitter:title" content="Ransomware Mechanics | Davopex">
+  <meta name="twitter:description" content="Learn how modern ransomware achieves persistence, purges backups, and uses double-extortion tactics to compromise organizations.">
+  <meta name="twitter:image" content="https://davopex.vercel.app/assets/images/ransomware-800x418.png">
   
  <script type="application/ld+json">
 {
@@ -37,7 +38,7 @@
   "url": "https://davopex.vercel.app",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://davopex.vercel.app/images/images/davopex-300x300.png"
+    "url": "https://davopex.vercel.app/assets/images/davopex-300x300.png"
   }
 }
 </script>
@@ -54,35 +55,47 @@
     }
     }
   </script>
-  <link rel="canonical" href="https://davopex.vercel.app"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://davopex.vercel.app/images/images/davopex-180x180.png"/> 
-  <link rel="icon" type="image/png" sizes="32x32" href="https://davopex.vercel.app/images/images/davopex-32x32.png"/>
-  <link rel="icon" href="https://davopex.vercel.app/images/images/davopex-144x144.png" sizes="144x144"/>
-  <link rel="icon" href="https://davopex.vercel.app/images/images/davopex-96x96.png" sizes="96x96"/>
-  <link rel="icon" href="https://davopex.vercel.app/images/images/davopex-48x48.png" sizes="48x48"/>
-  <link rel="shortcut icon" href="https://davopex.vercel.app/images/images/davopex-16x16.png" type="image/x-icon"/>
-  <link rel="manifest" href="https://davopex.vercel.app/site.webmanifest"/>
+<link rel="canonical" href="https://davopex.vercel.app"/>
+   <!-- Light mode favicon -->
+   <link rel="shortcut icon" type="image/png" href="https://devopex.vercel.app/images/light-16x16.png" media="(prefers-color-scheme: light)" sizes="16x16"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-32x32.png" media="(prefers-color-scheme: light)" sizes="32x32"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-48x48.png" media="(prefers-color-scheme: light)"sizes="48x48"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-96x96.png" media="(prefers-color-scheme: light)" sizes="96x96"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-144x144.png" media="(prefers-color-scheme: light)" sizes="144x144"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-192x192.png" media="(prefers-color-scheme: light)" sizes="192x192"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/light-512x512.png" media="(prefers-color-scheme: light)" sizes="512x512"/>
+   <link rel="apple-touch-icon" sizez="180x180" href="https://devopex.vercel.app/images/light-180x180.png"/>
 
-  <style>  
+   <!-- Dark mode favicons -->
+   <link rel="shortcut icon" type="image/png" href="https://devopex.vercel.app/images/dark-16x16.png" media="(prefers-color-scheme: dark)" sizes="16x16"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-32x32.png" media="(prefers-color-scheme: dark)" sizes="32x32"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-48x48.png" media="(prefers-color-scheme: dark)"sizes="48x48"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-96x96.png" media="(prefers-color-scheme: dark)" sizes="96x96"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-144x144.png" media="(prefers-color-scheme: dark)" sizes="144x144"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-192x192.png" media="(prefers-color-scheme: dark)" sizes="192x192"/>
+   <link rel="icon" type="image/png" href="https://devopex.vercel.app/images/dark-512x512.png" media="(prefers-color-scheme: dark)" sizes="512x512"/>
+   <link rel="manifest" href="https://davopex.vercel.app/site.webmanifest"/>
+  <style>
     :root { 
         --primary-blue: #0066ff; 
         --accent-glow: rgba(51, 0, 255, 0.3);
         --bg-dark: #0a0a0c;
         --card-bg: rgba(255, 255, 255, 0.05);
-        --text-main: #ffffff;
-        --text-dim: #ccc;
     }
 
     body { 
         margin: 0; 
         font-family: 'Inter', 'Segoe UI', sans-serif; 
         background: var(--bg-dark); 
-        color: var(--text-main); 
+        color: #fff; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
         min-height: 100vh;
         overflow-x: hidden;
     }
 
-    /* Ambient Background Glow from Style 1 */
+    /* Ambient Background Glow */
     body::before {
         content: "";
         position: fixed;
@@ -96,282 +109,201 @@
         z-index: -1;
     }
     
-    * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
-        * {
+    * {
+        -webkit-tap-highlight-color: transparent;
+        outline-style: none;
+    }
+    
+    * {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        }
+    }
 
-    /* Header Styling */
-    header { 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        backdrop-filter: blur(5px); 
-        background: rgba(255, 255, 255, 0.08); 
-        padding: 0 20px; 
+    /* Back Button - Sleek Glass style */
+    .back-home { 
         position: fixed; 
-        width: 100%; 
-        top: 0; 
-        z-index: 1000; 
-        height: 70px; 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-    }
-    .logo-text { font-weight: 800; letter-spacing: -1px; text-transform: uppercase; font-size: 1.5rem; }  
-    .logo-text span { color: var(--primary-blue); }  
-
-    /* Search Wrapper - Styled with Glassmorphism */
-    .search-wrapper {
-        display: block;
-        max-width: 600px;
-        margin: 110px auto 20px;
-        padding: 0 20px;
-    }
-      
-    .search-wrapper form { position: relative; }
-      
-    .search-wrapper input[type="search"] {
-        width: 100%;
-        padding: 14px 45px 14px 20px;
-        border-radius: 15px;
+        top: 25px; 
+        left: 25px; 
+        color: #fff; 
+        font-size: 0.9rem;
+        text-decoration: none; 
+        background: rgba(255, 255, 255, 0.08); 
+        padding: 10px 20px; 
+        border-radius: 15px; 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
+        align-items: center;
+        display: flex;
+        gap: 10px;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff;
-        backdrop-filter: blur(10px);
-        font-size: 1rem;
-        transition: 0.3s;
+        transition: all 0.3s ease; 
+        font-weight: 500;
+        z-index: 1000;
     }
-    
-    .search-wrapper input[type="search"]:focus {
-        border-color: var(--primary-blue);
-        box-shadow: 0 0 20px var(--accent-glow);
+    .back-home:hover { 
+        background: var(--primary-blue); 
+        transform: translateX(-5px);
+        border: 1px solid rgba(255, 255, 255, 255);
     }
-    
-    .search-wrapper button {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        color: var(--primary-blue);
-        font-size: 1.1rem;
-        cursor: pointer;
+
+    /* Video Player Container */
+    .video-wrapper { 
+        width: 95%; 
+        max-width: 1100px; 
+        margin-top: 100px; 
+        aspect-ratio: 16 / 9; 
+        border-radius: 20px;
+        overflow: hidden;
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
-  
-    /* Grid and Container */
-    .video-page-container { padding: 20px; max-width: 1200px; margin: 0 auto 100px; }  
-    .page-title { 
-        text-align: center; 
+    video { width: 100%; height: 100%; display: block; object-fit: cover; 
+        object-position: center;}
+
+    /* Content Layout */
+    .info-section { 
+        width: 95%; 
+        max-width: 1100px; 
+        padding: 40px 0; 
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+    }
+
+    .main-info h1 { 
         font-size: 2.5rem; 
-        margin-bottom: 10px;
+        margin: 0 0 15px 0; 
         background: linear-gradient(to right, #fff, #999);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    .page-subtitle { text-align: center; color: #888; margin-bottom: 40px; }
-    
-    .video-grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-        gap: 30px; 
+
+    .meta { 
+        display: flex; 
+        gap: 25px; 
+        margin-bottom: 25px; 
+        color: #aaa;
+        font-size: 0.9rem;
+    }
+    .meta span i { color: var(--primary-blue); margin-right: 8px; }
+
+    .description { 
+        font-size: 1.1rem; 
+        line-height: 1.8; 
+        color: #ccc; 
+        margin-bottom: 30px;
     }
 
-    /* Card Styling from Style 1 Logic */
-    .card { 
-        background: var(--card-bg); 
-        border-radius: 20px; 
-        overflow: hidden; 
+    /* Side Features */
+    .features-card {
+        background: var(--card-bg);
+        padding: 25px;
+        border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        display: flex; 
-        flex-direction: column; 
-        text-decoration: none; 
-        color: inherit; 
-    }  
-    .card:hover { 
-        transform: translateY(-8px); 
-        border-color: rgba(0, 102, 255, 0.4);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px var(--accent-glow);
+        height: fit-content;
     }
-
-    .thumb-wrapper { position: relative; aspect-ratio: 16/9; background: #000; overflow: hidden; }
-    .thumb-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-    .card:hover .thumb-wrapper img { transform: scale(1.05); }
-
-    .play-overlay { 
-        position: absolute; 
-        top: 0; left: 0; width: 100%; height: 100%; 
-        display: flex; align-items: center; justify-content: center; 
-        background: rgba(0,0,0,0.4); color: white; 
-        font-size: 3rem; opacity: 0; transition: 0.3s; 
-    }
-    .card:hover .play-overlay { opacity: 1; }
-
-    .card-content { padding: 25px; }
-    .card-title { color: #fff; margin: 0 0 10px 0; font-size: 1.25rem; }  
-    .card-content p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px; }
-
-    .card-footer { 
-        margin-top: auto; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        border-top: 1px solid rgba(255, 255, 255, 0.05); 
-        padding-top: 15px; 
-        color: #888;
-        font-size: 0.85rem;
-    }
-    .card-footer i { color: var(--primary-blue); margin-right: 5px; }
-
-    /* 404 Full Screen Overlay Style 1 Match */
-    #no-results {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: var(--bg-dark);
-        display: flex; flex-direction: column;
-        justify-content: center; align-items: center;
-        z-index: 9999; text-align: center;
-    }
-    #no-results h2 { font-size: 6rem; color: var(--primary-blue); margin: 0; text-shadow: 0 0 30px var(--accent-glow); }
-    #no-results p { font-size: 1.2rem; color: #ccc; margin: 10px 0; }
-    #no-results span { margin-top: 20px; color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
-
-    /* Floating Back Button Style 1 Match */
-    .back-home {
-        position: fixed;
-        bottom: 30px;
-        left: 30px;
-        background: rgba(255, 255, 255, 0.08); 
-        color: #fff;
-        padding: 9px 18px;
-        border-radius: 30px;  
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
+    .features-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.2rem; }
+    .features-list { list-style: none; padding: 0; margin: 0; }
+    .features-list li { 
+        padding: 10px 0; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        font-size: 0.95rem;
         display: flex;
         align-items: center;
         gap: 10px;
-        z-index: 1000;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
     }
+    .features-list li:last-child { border: none; }
+    .features-list li i { color: #00ff88; font-size: 0.8rem; }
 
-    .back-home:hover {
-        background: rgba(10, 10, 12, 0.08);
-        transform: translateY(-3px);
+    /* Share Button */
+    .action-row { display: flex; gap: 15px; }
+    .btn-share { 
+        background: var(--primary-blue); 
+        border: none; 
+        color: white; 
+        padding: 14px 28px; 
+        border-radius: 12px; 
+        font-weight: 600;
+        cursor: pointer; 
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
+    .btn-share:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 5px 15px var(--accent-glow); }
 
-    @media (max-width: 600px) {
-        .page-title { font-size: 1.8rem; }
-        .video-grid { grid-template-columns: 1fr; }
+    @media (max-width: 850px) {
+        .info-section { grid-template-columns: 1fr; }
+        .main-info h1 { font-size: 1.8rem; }
     }
-  </style>  
-</head>  
-<body>  
-  <header><div class="logo-text">Hack<span>Spherix</span></div></header>  
+  </style>
+</head>
+<body>
+
+  <button class="back-home" onclick="goBack()"><i class="fas fa-arrow-left"></i>Back</button>
   
-   <div class="search-wrapper">
-    <form id="search-form">
-      <input type="search" id="search-input" placeholder="Search tutorials (e.g. Phishing)..." />
-      <button type="submit"><i class="fas fa-search"></i></button>
-    </form>
+  <div class="video-wrapper">
+    <video controls preload="auto" poster="https://davopex.vercel.app/assets/images/ransomware-thumbnail.png">
+      <source src="https://davopex.vercel.app/assets/videos/ransomware.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-  
-  <main class="video-page-container">  
-    <h1 class="page-title">Cybersecurity Video Library</h1>  
-    <p class="page-subtitle">Master the art of defense through expert-led visual guides.</p>
 
-    <div class="video-grid" id="videoGrid">
-        <a href="https://davopex.vercel.app/cyber_awareness/phishing" class="card" data-title="phishing">  
-          <div class="thumb-wrapper">
-            <img src="https://davopex.vercel.app/images/images/phishing-thumbnail.png" alt="Phishing">
-            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-          </div>
-          <div class="card-content">
-              <h2 class="card-title">Understanding Phishing Attacks</h2>  
-              <p>How hackers use social engineering to steal credentials and bypass security.</p>  
-              <div class="card-footer">
-                  <span><i class="fa-regular fa-clock"></i> 7 mins</span>
-                  <span><i class="fa-solid fa-signal"></i> Beginner</span>
-              </div>
-          </div>
-        </a>  
-      
-        <a href="https://davopex.vercel.app/cyber_awareness/ransomware" class="card" data-title="ransomware">  
-          <div class="thumb-wrapper">
-            <img src="https://davopex.vercel.app/images/images/ransomware-thumbnail.png" alt="Ransomware">
-            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-          </div>
-          <div class="card-content">
-              <h2 class="card-title">How Ransomware Works</h2>  
-              <p>A deep dive into encryption, payload delivery, and effective backup strategies.</p>  
-              <div class="card-footer">
-                  <span><i class="fa-regular fa-clock"></i> 5 mins</span>
-                  <span><i class="fa-solid fa-signal"></i> Intermediate</span>
-              </div>
-          </div>
-        </a>  
+  <main class="info-section">
+      <div class="main-info">
+        <h1>Understanding Ransomware Attacks</h1>
+        <div class="meta">
+            <span><i class="fa-solid fa-calendar-day"></i> 2026 Edition</span>
+            <span><i class="fa-solid fa-clock"></i> 5 Minutes</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner</span>
+        </div>   
+        <p class="description">
+         Ransomware has evolved from simple lockers to double-exfiltration extortion. In this module, we trace the infection path from initial delivery to the final encryption event. We analyze how attackers purge Volume Shadow Copies (VSS), achieve persistence via Registry keys, and exfiltrate sensitive data before triggering the payload to maximize leverage against the victim.
+        </p>
+
+        <div class="action-row">
+            <button onclick="share()" class="btn-share">
+                <i class="fa-solid fa-share-nodes"></i> Share Tutorial
+            </button>
+        </div>
     </div>
-  </main>  
 
-  <button class="back-home" onclick="goBack()""><i class="fa-solid fa-house"></i>Back to home</button>
+    <aside class="features-card">
+        <h3>Key Learning Points</h3>
+        <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> Infection Vector Analysis</li>
+            <li><i class="fa-solid fa-check"></i> VSS & Shadow Copy Purging</li>
+            <li><i class="fa-solid fa-check"></i> Registry Persistence Keys</li>
+            <li><i class="fa-solid fa-check"></i> Double-Extortion Logic</li>
+            <li><i class="fa-solid fa-check"></i> Post-Invention Recovery Tips</li>
+        </ul>
+    </aside>
+  </main>
 
-  <script>  
-    const searchInput = document.getElementById("search-input");
-    const searchForm = document.getElementById("search-form");
-    const videoGrid = document.getElementById("videoGrid");
-
-    searchForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const query = searchInput.value.toLowerCase().trim();
-      let matchFound = false;
-
-      const old404 = document.getElementById("no-results");
-      if (old404) old404.remove();
-
-      const cards = document.querySelectorAll(".card");
-      cards.forEach(card => {
-        const title = card.getAttribute("data-title").toLowerCase();
-        if (title.includes(query) || card.innerText.toLowerCase().includes(query)) {
-          card.style.display = "flex";
-          matchFound = true;
+  <script>
+    async function share() {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Phishing Tutorial | Davopex',
+                    text: 'I found this cybersecurity guide helpful!',
+                    url: window.location.href,
+                });
+            } catch (err) { console.log("Share failed", err); }
         } else {
-          card.style.display = "none";
+            navigator.clipboard.writeText(window.location.href);
+            alert("Link copied to clipboard!");
         }
-      });
-
-      if (!matchFound) {
-        const noResult = document.createElement("div");
-        noResult.id = "no-results";
-        noResult.innerHTML = `
-            <h2>404</h2>
-            <p>No tutorials found for "${query}"</p>
-            <span>Tap anywhere to return</span>
-        `;
-        document.body.appendChild(noResult);
-        document.body.style.overflow = 'hidden';
-
-        noResult.addEventListener("click", function() {
-            noResult.remove();
-            document.body.style.overflow = 'auto';
-            cards.forEach(card => card.style.display = "flex");
-            searchInput.value = "";
-        });
-      }
-      
-      searchInput.blur();
-    });
-function goBack() {
+    }
+    function goBack() {
   if (document.referrer && document.referrer.startsWith(window.location.origin)) {
     history.back();
   } else {
-    window.location.replace("https://davopex.vercel.app/");
+    window.location.replace("https://davopex.vercel.app/cyber_awareness/");
   }
-}
-  </script>  
-</body>  
-</html>
+    }
+  </script>
+</body>
+  </html>
