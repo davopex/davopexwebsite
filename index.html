@@ -229,7 +229,7 @@ margin: 0 auto 30px;
 line-height: 1.8;
 }
 
-.hero-btn {
+.hero-btn1 {
 display: inline-flex;
 align-items: center;
 justify-content: center;
@@ -246,11 +246,32 @@ border:1px solid var(--glass-border);
 transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.hero-btn:hover {
+.hero-btn1:hover {
     transform: translateY(-3px);
     background: transparent;
 }
 
+.hero-btn2 {
+display: block;
+margin: 15px auto;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 12px 25px;
+width: 45%;
+background: var(--primary-blue);
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 10px;
+border:1px solid var(--glass-border);
+transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn2:hover {
+    transform: translateY(-3px);
+    background: transparent;
+}
 .menu-toggle {
 display: none;
 flex-direction: column;
@@ -844,9 +865,9 @@ margin-top: 10px;
 <div class="hero-section">
 <h2>Welcome to Davopex</h2>
 <p>A reliable place to learn <b>CyberSecurity</b>, <b>Ethical hacking</b>, and <b>online safety</b>, with easy tutorials that help you spot and protect yourself from digital threats.</p>
-<a href="https://davopex.vercel.app/ethical_hacking" class="hero-btn"><i class="fas fa-user-secret"></i> Ethical Hacking</a>
-<a href="https://davopex.vercel.app/cyber_awareness" class="hero-btn"><i class="fa-solid fa-play-circle"></i> Videos</a>
-<a href="#tutorials" class="btn" id="tt-btn">Explore Tutorials</a>
+<a href="https://davopex.vercel.app/ethical_hacking" class="hero-btn1"><i class="fas fa-user-secret"></i> Ethical Hacking</a>
+<a href="https://davopex.vercel.app/cyber_awareness" class="hero-btn1"><i class="fa-solid fa-play-circle"></i> Videos</a>
+<a href="#tutorials" class="hero-btn2" id="tt-btn">Explore Tutorials</a>
 </div>
 <div class="search-wrapper">
 <form id="search-form">
