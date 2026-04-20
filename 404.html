@@ -1,11 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>404 - Page Not Found</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+<title>404 | Davopex</title>
+
+<style>
+:root {
+--primary-blue: #0066ff;
+--bg-dark: #0a0a0c;
+--glass: rgba(255,255,255,0.05);
+--border: rgba(255,255,255,0.1);
+}
+
+* {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: var(--bg-dark);
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+}
+
+/* Glow background */
+body::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: var(--primary-blue);
+filter: blur(150px);
+opacity: 0.15;
+z-index: -1;
+}
+
+/* Animated lines */
+.bg-lines {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+overflow: hidden;
+z-index: -1;
+opacity: 0.1;
+}
+
+.line {
+position: absolute;
+width: 100%;
+height: 2px;
+background: var(--primary-blue);
+animation: move 12s linear infinite;
+}
+
+.line:nth-child(1){ top:20%; }
+.line:nth-child(2){ top:40%; animation-delay:2s;}
+.line:nth-child(3){ top:60%; animation-delay:4s;}
+
+@keyframes move {
+0% { transform: translateX(-100%); }
+100% { transform: translateX(100%); }
+}
+
+/* Glass card */
+.container {
+text-align: center;
+background: var(--glass);
+padding: 40px;
+border-radius: 20px;
+border: 1px solid var(--border);
+backdrop-filter: blur(12px);
+animation: fade 1s ease;
+}
+
+h1 {
+font-size: 120px;
+margin: 0;
+background: linear-gradient(45deg,#fff,#0066ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: float 3s infinite;
+}
+
+p {
+color: #ccc;
+margin: 10px 0 25px;
+}
+
+.btn-group {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--glass);
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .btn.primary {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .btn.primary:hover {
+            background: #1a75ff;
+            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+        }
+
+@keyframes float {
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+@keyframes fade {
+from{opacity:0; transform:scale(0.9);}
+to{opacity:1; transform:scale(1);}
+}
+</style>
 </head>
-<body style="text-align:center; font-family:sans-serif;">
-  <h1>404</h1>
-  <p>Page not found 😢</p>
-  <a href="https://davopex.vercel.app/">Go Home</a>
+
+<body>
+
+<div class="bg-lines">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="container">
+<h1>404</h1>
+<p>SORRY PAGE NOT FOUND</p>
+
+<div class="btn-group">
+            <button class="btn" onclick="goBack()">
+                <i class="fas fa-chevron-left"></i>
+                Go Back
+            </button>
+
+            <button class="btn primary" onclick="goHome()">
+                <i class="fa-solid fa-house-chimney"></i>
+                Home
+            </button>
+        </div>
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function goHome() {
+    window.location.href = "https://davopex.vercel.app";
+}
+</script>
+
 </body>
 </html>
