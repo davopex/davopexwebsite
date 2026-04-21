@@ -15,9 +15,13 @@
 }
 
 * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;  
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
 
 body {
 margin: 0;
@@ -77,6 +81,7 @@ animation: move 12s linear infinite;
 text-align: center;
 background: var(--glass);
 padding: 40px;
+gap: 0;
 border-radius: 20px;
 border: 1px solid var(--border);
 backdrop-filter: blur(12px);
@@ -90,11 +95,19 @@ background: linear-gradient(45deg,#fff,#0066ff);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 animation: float 3s infinite;
+margin-bottom: 5px;
+}
+
+h2 {
+   font-size: 40px;
+   margin: 0;
+   margin-bottom: 5px;
 }
 
 p {
 color: #ccc;
-margin: 10px 0 25px;
+margin: 0;
+margin-bottom: 10px;
 }
 
 .btn-group {
@@ -162,7 +175,8 @@ to{opacity:1; transform:scale(1);}
 
 <div class="container">
 <h1>404</h1>
-<p>SORRY PAGE NOT FOUND</p>
+<h2>Oops!</h2>
+<p>PAGE NOT FOUND</p>
 
 <div class="btn-group">
             <button class="btn" onclick="goBack()">
